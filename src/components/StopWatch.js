@@ -58,7 +58,7 @@ class StopWatch extends Component {
     }
 
     render() {
-        
+
         let today       = new Date();
         let day         = today.getDate();
         let month       = today.getMonth();
@@ -71,7 +71,7 @@ class StopWatch extends Component {
                 <div id="clock">
                     <p className="date">{parsedDate}</p>
                     <p className="time">00:00:0{this.state.time}</p>
-                    <p className="text">DIGITAL CLOCK with React.js</p>
+                    <p className="text">DIGITAL CLOCK with {this.props.framework}</p>
                 </div>
                 <div className="btn" onClick={this.pauseTimer}>{ this.state.isZero ? 'Start' : 'Stop' }</div>
                 <div className="btn" onClick={this.resetTimer}>Reset</div>
